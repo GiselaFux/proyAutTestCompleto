@@ -1,0 +1,7 @@
+{
+  "new_post": {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+  }
+}

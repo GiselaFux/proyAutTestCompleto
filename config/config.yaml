@@ -1,0 +1,4 @@
+base_url: "https://www.saucedemo.com"
+api_base_url: "https://jsonplaceholder.typicode.com"
+browser: "chrome"
+implicit_wait: 5
