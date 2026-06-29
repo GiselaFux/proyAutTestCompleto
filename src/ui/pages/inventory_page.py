@@ -1,9 +1,11 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from .base_page import BasePage
 
 class InventoryPage(BasePage):
     INVENTORY_ITEM = (By.CLASS_NAME, "inventory_item")
-    CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
+    CART_BADGE = (By.CSS_SELECTOR, ".shopping_cart_badge")
     ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, "button.btn_inventory")
 
     def get_products_count(self) -> int:
@@ -16,5 +18,7 @@ class InventoryPage(BasePage):
             buttons[0].click()
 
     def get_cart_count(self) -> int:
-        badge = self.driver.find_element(*self.CART_BADGE)
-        return int(badge.text)
+        # Espera hasta que aparezca el badge
+        wait = WebDriverWait(self.driver, 10)
+        badge = wait.until(EC.presence_of_element_located(self.CART_BADGE))
+        return int(badge.text)    
