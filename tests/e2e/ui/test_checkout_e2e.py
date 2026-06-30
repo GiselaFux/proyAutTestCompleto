@@ -1,7 +1,8 @@
 import yaml
 import pytest
-from ui.pages.login_page import LoginPage
-from ui.pages.inventory_page import InventoryPage
+from src.ui.pages.login_page import LoginPage
+from src.ui.pages.inventory_page import InventoryPage
+
 
 @pytest.mark.ui
 @pytest.mark.e2e

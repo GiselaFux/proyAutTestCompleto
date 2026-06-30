@@ -1,9 +1,16 @@
-import yaml
+"""import yaml
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 from ui.pages.login_page import LoginPage
-from ui.pages.inventory_page import InventoryPage
+from ui.pages.inventory_page import InventoryPage"""
+
+import yaml
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+from src.ui.pages.login_page import LoginPage
+from src.ui.pages.inventory_page import InventoryPage
 
 def before_all(context):
     with open("config/config.yaml") as f:
