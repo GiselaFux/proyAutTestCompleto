@@ -1,10 +1,3 @@
-"""import yaml
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-
-from ui.pages.login_page import LoginPage
-from ui.pages.inventory_page import InventoryPage"""
-
 import yaml
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager

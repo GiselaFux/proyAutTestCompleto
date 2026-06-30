@@ -1,4 +1,7 @@
+
 from behave import given, when, then
+from src.ui.pages.login_page import LoginPage
+from src.ui.pages.inventory_page import InventoryPage
 
 @given("que estoy en la página de login")
 def step_impl(context):
