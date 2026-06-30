@@ -88,10 +88,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Ejecutar E2E UI
+      - name: Ejecutar E2E ui tests
         run: |
           mkdir -p reports
           pytest tests/e2e/ui -m "ui and e2e" -v --html=reports/e2e_report.html --self-contained-html
+
+      - name: Set PYTHONPATH to project root
+        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
       - name: Ejecutar BDD (Behave)
         run: |
@@ -101,4 +104,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: e2e-and-bdd-reports
-          path: reports/
+          path: reports/          
+          
