@@ -96,7 +96,7 @@ jobs:
       - name: Set PYTHONPATH to project root
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
-      - name: Ejecutar BDD (Behave)
+      - name: Run Behave  BDD tests(Behave)
         run: |
           behave behave/features -f json -o reports/behave.json -f pretty
 

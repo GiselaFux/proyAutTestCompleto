@@ -1,4 +1,4 @@
-from ui.services.cart_service import CartService
+from src.ui.services.cart_service import CartService
 import pytest
 
 @pytest.mark.unit
